@@ -1,444 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Green7 - RoBin: The Innovative Talking Trash Bin</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Page-specific styles */
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1.5em 2em;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.8em;
-      font-size: 1.5em;
-      font-weight: 700;
-      color: var(--color-white);
-    }
-
-    .logo img {
-      height: 40px;
-      width: auto;
-    }
-
-    .logo .green-text {
-      color: var(--color-green-light);
-    }
-
-    nav {
-      display: flex;
-      gap: 2em;
-    }
-
-    nav a {
-      color: var(--color-white);
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    nav a:hover {
-      color: var(--color-green-light);
-    }
-
-    /* Hero section */
-    .hero {
-      background: linear-gradient(135deg, var(--color-black) 0%, var(--color-green-dark) 100%);
-      color: var(--color-white);
-      padding: 5em 2em;
-      text-align: center;
-    }
-
-    .hero h1 {
-      color: var(--color-white);
-      font-size: 3em;
-      margin-bottom: 0.3em;
-      font-weight: 700;
-    }
-
-    .hero .tagline {
-      font-size: 1.3em;
-      margin-bottom: 1.5em;
-      color: var(--color-green-light);
-      font-weight: 300;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 1em;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background-color: var(--color-green);
-      color: var(--color-white);
-      padding: 0.8em 1.8em;
-      border: none;
-      border-radius: 4px;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 1em;
-      transition: background-color 0.2s ease, transform 0.1s ease;
-    }
-
-    .btn-primary:hover {
-      background-color: var(--color-green-light);
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background-color: transparent;
-      color: var(--color-white);
-      padding: 0.8em 1.8em;
-      border: 2px solid var(--color-green-light);
-      border-radius: 4px;
-      font-weight: 600;
-      cursor: pointer;
-      font-size: 1em;
-      transition: all 0.2s ease;
-    }
-
-    .btn-secondary:hover {
-      background-color: var(--color-green-light);
-      color: var(--color-black);
-    }
-
-    /* Features section */
-    .features {
-      padding: 4em 2em;
-      background-color: #f9f9f9;
-    }
-
-    .features-container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.5em;
-      margin-bottom: 3em;
-      color: var(--color-black);
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2em;
-    }
-
-    .feature-card {
-      background: var(--color-white);
-      padding: 2em;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .feature-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    }
-
-    .feature-icon {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-
-    .feature-card h3 {
-      color: var(--color-green);
-      margin-bottom: 0.5em;
-    }
-
-    .feature-card p {
-      color: var(--text-secondary);
-      font-size: 0.95em;
-      line-height: 1.6;
-    }
-
-    /* About section */
-    .about {
-      padding: 4em 2em;
-      background-color: var(--color-white);
-    }
-
-    .about-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3em;
-      align-items: center;
-    }
-
-    .about-content h2 {
-      font-size: 2.2em;
-      margin-bottom: 1em;
-      color: var(--color-black);
-    }
-
-    .about-content p {
-      margin-bottom: 1em;
-      line-height: 1.8;
-    }
-
-    .about-image {
-      background: linear-gradient(135deg, var(--color-green) 0%, var(--color-green-light) 100%);
-      padding: 2em;
-      border-radius: 8px;
-      text-align: center;
-      color: white;
-      min-height: 300px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .about-image img {
-      max-width: 100%;
-      height: auto;
-      max-height: 300px;
-      border-radius: 6px;
-    }
-
-    /* Contact section */
-    .contact {
-      padding: 4em 2em;
-      background-color: #f9f9f9;
-    }
-
-    .contact-container {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .contact-title {
-      text-align: center;
-      font-size: 2.5em;
-      margin-bottom: 3em;
-    }
-
-    .form-group {
-      margin-bottom: 1.5em;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 0.5em;
-      font-weight: 500;
-      color: var(--color-black);
-    }
-
-    .form-group input,
-    .form-group textarea {
-      width: 100%;
-      padding: 0.8em 0.6em;
-      border: 1px solid #cccccc;
-      border-radius: 4px;
-      font-family: inherit;
-      font-size: 1em;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: var(--color-green);
-      box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
-    }
-
-    .submit-btn {
-      width: 100%;
-      background-color: var(--color-green);
-      color: var(--color-white);
-      padding: 0.8em;
-      border: none;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    .submit-btn:hover {
-      background-color: var(--color-green-dark);
-    }
-
-    /* Footer */
-    footer {
-      background-color: var(--color-black);
-      color: var(--color-white);
-      text-align: center;
-      padding: 2em;
-      margin-top: 2em;
-    }
-
-    footer p {
-      color: var(--color-white);
-      margin: 0.5em 0;
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 1em;
-      }
-
-      nav {
-        gap: 1em;
-        font-size: 0.9em;
-      }
-
-      .hero h1 {
-        font-size: 2em;
-      }
-
-      .hero-buttons {
-        flex-direction: column;
-      }
-
-      .btn-primary, .btn-secondary {
-        width: 100%;
-      }
-
-      .about-container {
-        grid-template-columns: 1fr;
-      }
-
-      .section-title {
-        font-size: 2em;
-      }
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Green7 – Greenifying 24/7</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Header / Navigation -->
-  <header>
-    <div class="logo">
-      <img src="Logo.png" alt="Green7 Logo">
-      <span>Green<span class="green-text">7</span></span>
+
+  <!-- NAV -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <h1 class="logo">Green7</h1>
+      <nav>
+        <a href="#problem">Problem</a>
+        <a href="#product">Product</a>
+        <a href="#model">Business</a>
+        <a href="#team">Team</a>
+        <a href="#contact" class="btn-small">Contact</a>
+      </nav>
     </div>
-    <nav>
-      <a href="#features">Features</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- HERO -->
   <section class="hero">
-    <img src="mascot.png" alt="RoBin Mascot" style="max-width: 200px; height: auto; margin-bottom: 1.5em; border-radius: 8px;">
-    <h1>RoBin</h1>
-    <p class="tagline">The Innovative Talking Trash Bin</p>
-    <p style="margin-bottom: 2em; font-weight: 300;">Revolutionizing waste management with AI-powered interactive technology</p>
-    <div class="hero-buttons">
-      <button class="btn-primary">Learn More</button>
-      <button class="btn-secondary">Get Started</button>
+    <div class="container hero-content">
+      <h2>Greenifying 24/7</h2>
+      <p class="subtitle">Because recycling starts with kids.</p>
+      <p class="hero-text">
+        Green7 builds AI-powered recycling education tools that turn every
+        trash throw into a learning moment.
+      </p>
+      <a href="#product" class="btn-primary">Meet RoBin</a>
     </div>
   </section>
 
-  <!-- Features Section -->
-  <section class="features" id="features">
-    <div class="features-container">
-      <h2 class="section-title">Why Choose RoBin?</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">🗣️</div>
-          <h3>Interactive Conversations</h3>
-          <p>RoBin engages users with friendly, intelligent conversations while they dispose of waste responsibly.</p>
+  <!-- PROBLEM -->
+  <section id="problem" class="section light">
+    <div class="container">
+      <h3>The Problem</h3>
+      <p>
+        Recycling education is not sticking. Kids lose interest,
+        feedback is delayed, and teachers struggle to measure impact.
+      </p>
+      <blockquote>
+        “Motivating kids. Giving the right feedback is important.”
+        <span>— Waste Management Services Manager, KAUST</span>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- PRODUCT -->
+  <section id="product" class="section">
+    <div class="container">
+      <h3>RoBin</h3>
+      <p class="section-subtitle">
+        Smart talking recycling bin for kids
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4>Real-Time Feedback</h4>
+          <p>Instant audio and visual responses powered by AI.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">♻️</div>
-          <h3>Smart Recycling</h3>
-          <p>Intelligent sorting guidance helps users recycle properly and reduce contamination in recycling streams.</p>
+        <div class="card">
+          <h4>Gamified Learning</h4>
+          <p>Animations, mascot interaction, and class competition.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3>Real-time Analytics</h3>
-          <p>Track waste metrics, recycling rates, and environmental impact through an intuitive dashboard.</p>
+        <div class="card">
+          <h4>Smart Detection</h4>
+          <p>Object recognition ensures correct waste disposal.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🌍</div>
-          <h3>Eco-Friendly Impact</h3>
-          <p>Make a difference with every interaction. Gamified rewards encourage sustainable waste management habits.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4>Child-Friendly Design</h4>
+          <p>Hygienic, safe, and designed for school environments.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🔧</div>
-          <h3>Easy Integration</h3>
-          <p>Seamlessly integrate RoBin into schools, offices, and public spaces. Works with existing waste infrastructure.</p>
+        <div class="card">
+          <h4>Data & Analytics</h4>
+          <p>Track performance by class, school, or location.</p>
         </div>
-        <div class="feature-card">
-          <div class="feature-icon">🎯</div>
-          <h3>Customizable Settings</h3>
-          <p>Tailor RoBin's personality, messaging, and rewards system to match your organization's values and goals.</p>
+        <div class="card">
+          <h4>Privacy-Safe</h4>
+          <p>Built with children’s privacy as a core principle.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="about-container">
-      <div class="about-content">
-        <h2>About Green7</h2>
-        <p>Green7 is a forward-thinking technology company dedicated to making environmental sustainability accessible and engaging through innovative, interactive solutions.</p>
-        <p>We believe that waste management doesn't have to be boring. By combining artificial intelligence with everyday objects, we're creating a new generation of products that educate, entertain, and inspire positive environmental action.</p>
-        <p>RoBin is our flagship product—a talking trash bin that makes waste disposal fun and educational for everyone, from children learning about recycling to organizations striving for sustainability goals.</p>
-        <button class="btn-primary">Explore Our Mission</button>
-      </div>
-      <div class="about-image">
-        <img src="productimage.jpeg" alt="RoBin Product">
+  <!-- VALUE -->
+  <section class="section light">
+    <div class="container">
+      <h3>Value Proposition</h3>
+      <div class="grid-3">
+        <div class="value">
+          <h4>Interactive Education</h4>
+          <p>Turns recycling into an engaging experience.</p>
+        </div>
+        <div class="value">
+          <h4>Habit Formation</h4>
+          <p>Builds sustainable behavior from an early age.</p>
+        </div>
+        <div class="value">
+          <h4>Measurable Impact</h4>
+          <p>Every action becomes trackable data.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <div class="contact-container">
-      <h2 class="contact-title">Get in Touch</h2>
-      <form>
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required>
+  <!-- BUSINESS MODEL -->
+  <section id="model" class="section">
+    <div class="container">
+      <h3>Business Model</h3>
+      <p class="center">
+        Hardware + Annual Subscription = Recurring Impact & Revenue
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h4>Hardware</h4>
+          <p>One-time purchase of RoBin units.</p>
         </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
+        <div class="card">
+          <h4>Subscription</h4>
+          <p>Annual analytics, AI interaction, and updates.</p>
         </div>
-        <div class="form-group">
-          <label for="company">Company/Organization</label>
-          <input type="text" id="company" name="company">
+        <div class="card">
+          <h4>Add-ons</h4>
+          <p>Extended warranty and premium support.</p>
         </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send Message</button>
-      </form>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- TRACTION -->
+  <section class="section light">
+    <div class="container">
+      <h3>Proof of Traction</h3>
+      <p>
+        Successfully tested with Averda at KAUST within 2 hours.
+      </p>
+
+      <div class="quotes">
+        <blockquote>
+          “Looks fun for kids to try, and they would like to engage with it.”
+          <span>— Associate Principal, The KAUST School</span>
+        </blockquote>
+        <blockquote>
+          “Futuristic design for future awareness.”
+          <span>— Event Coordinator, Averda</span>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section">
+    <div class="container">
+      <h3>Meet the Team</h3>
+
+      <div class="grid-4">
+        <div class="team-card">
+          <h4>Moritz Schmid</h4>
+          <p>CEO</p>
+        </div>
+        <div class="team-card">
+          <h4>Ahmad Sorour</h4>
+          <p>CTO</p>
+        </div>
+        <div class="team-card">
+          <h4>Emma Lee Man Yi</h4>
+          <p>CMO</p>
+        </div>
+        <div class="team-card">
+          <h4>Isaac Lau Tsz Hin</h4>
+          <p>COO</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contact" class="cta">
+    <div class="container">
+      <h3>Join us. Greenify our future.</h3>
+      <p>
+        Tel: +966 554474409<br/>
+        Email: <a href="mailto:info@green7.com">info@green7.com</a>
+      </p>
+      <a href="mailto:info@green7.com" class="btn-primary">Invest / Contact</a>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2026 Green7. All rights reserved.</p>
-    <p>Making sustainability interactive, one product at a time.</p>
+    <p>© 2026 Green7. All rights reserved.</p>
   </footer>
+
 </body>
 </html>

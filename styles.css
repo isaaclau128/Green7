@@ -202,16 +202,18 @@ footer {
   }
 
   .nav-content {
-    flex-wrap: wrap;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 12px 0;
+    gap: 12px;
   }
 
   .logo {
     font-size: 1.1rem;
-    flex: 1;
     display: flex;
     align-items: center;
+    width: 100%;
   }
 
   .logo img {
@@ -221,21 +223,20 @@ footer {
   nav {
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 8px;
-    margin-top: 10px;
-    justify-content: center;
+    padding: 8px 0;
   }
 
   nav a {
     margin-left: 0;
-    margin-right: 8px;
     font-size: 0.9rem;
-    padding: 6px 10px;
+    padding: 8px 12px;
+    display: block;
   }
 
   .btn-small {
-    padding: 6px 12px;
+    padding: 8px 12px;
     font-size: 0.85rem;
   }
 
@@ -334,7 +335,7 @@ footer {
   }
 
   .nav-content {
-    padding: 10px 0;
+    gap: 10px;
   }
 
   .logo {
@@ -347,17 +348,15 @@ footer {
 
   nav {
     gap: 6px;
-    margin-top: 8px;
   }
 
   nav a {
     font-size: 0.8rem;
-    padding: 5px 8px;
-    margin-right: 6px;
+    padding: 6px 10px;
   }
 
   .btn-small {
-    padding: 5px 10px;
+    padding: 6px 10px;
     font-size: 0.75rem;
   }
 

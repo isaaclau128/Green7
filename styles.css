@@ -63,6 +63,12 @@ nav a {
   border-radius: 6px;
 }
 
+.logo-img {
+  height: 50px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
 /* HERO */
 .hero {
   background: linear-gradient(135deg, var(--green), #46b26b);
@@ -204,45 +210,53 @@ footer {
   .nav-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: stretch;
+    height: auto;
     padding: 12px 0;
-    gap: 12px;
+    justify-content: flex-start;
   }
 
   .logo {
-    font-size: 1.1rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
-    width: 100%;
+    padding: 8px 0;
   }
 
-  .logo img {
-    height: 45px !important;
+  .logo-img {
+    height: 40px;
+    margin-right: 8px;
   }
 
   nav {
-    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0;
     padding: 8px 0;
   }
 
   nav a {
     margin-left: 0;
     font-size: 0.9rem;
-    padding: 8px 12px;
+    padding: 10px 8px;
+    border-bottom: 1px solid #f0f0f0;
     display: block;
+  }
+
+  nav a:last-child {
+    border-bottom: none;
   }
 
   .btn-small {
     padding: 8px 12px;
     font-size: 0.85rem;
+    width: auto;
+    display: inline-block;
   }
 
   /* HERO */
   .hero {
-    padding: 50px 0;
+    padding: 40px 0;
   }
 
   .hero-content {
@@ -250,15 +264,18 @@ footer {
   }
 
   .hero h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
   }
 
   .subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    margin: 8px 0;
   }
 
   .hero-text {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin: 15px 0;
   }
 
   .btn-primary {
@@ -268,15 +285,17 @@ footer {
 
   /* SECTIONS */
   .section {
-    padding: 50px 0;
+    padding: 40px 0;
   }
 
   .section h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
   }
 
   .section-subtitle {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
   }
 
   /* GRIDS */
@@ -299,6 +318,7 @@ footer {
   .value h4,
   .team-card h4 {
     font-size: 1rem;
+    margin-bottom: 8px;
   }
 
   .card p,
@@ -309,23 +329,34 @@ footer {
 
   /* QUOTES */
   blockquote {
-    padding-left: 16px;
-    font-size: 0.9rem;
+    padding-left: 12px;
+    font-size: 0.85rem;
+    margin: 15px 0;
+  }
+
+  blockquote span {
+    font-size: 0.8rem;
+    margin-top: 6px;
   }
 
   /* CTA */
   .cta {
-    padding: 50px 0;
+    padding: 40px 0;
   }
 
   .cta h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+  }
+
+  .cta p {
+    font-size: 0.9rem;
   }
 
   /* FOOTER */
   footer {
     padding: 20px 0;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -334,62 +365,79 @@ footer {
     padding: 0 12px;
   }
 
+  .navbar {
+    padding: 0;
+  }
+
   .nav-content {
-    gap: 10px;
+    padding: 8px 0;
+    gap: 0;
   }
 
   .logo {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding: 6px 0;
   }
 
-  .logo img {
-    height: 40px !important;
+  .logo-img {
+    height: 35px;
+    margin-right: 6px;
   }
 
   nav {
-    gap: 6px;
+    gap: 0;
+    padding: 4px 0;
   }
 
   nav a {
-    font-size: 0.8rem;
-    padding: 6px 10px;
+    font-size: 0.75rem;
+    padding: 8px 6px;
   }
 
   .btn-small {
     padding: 6px 10px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   /* HERO */
   .hero {
-    padding: 40px 0;
+    padding: 30px 0;
   }
 
   .hero h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
   }
 
   .subtitle {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    margin: 6px 0;
   }
 
   .hero-text {
-    font-size: 0.9rem;
-    margin: 15px 0;
+    font-size: 0.8rem;
+    margin: 12px 0;
+    line-height: 1.4;
   }
 
   .btn-primary {
-    padding: 9px 18px;
-    font-size: 0.9rem;
+    padding: 8px 16px;
+    font-size: 0.85rem;
   }
 
   /* SECTIONS */
   .section {
-    padding: 40px 0;
+    padding: 30px 0;
   }
 
   .section h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .section-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 16px;
   }
 
   /* GRIDS */
@@ -406,16 +454,48 @@ footer {
     padding: 16px;
   }
 
+  .card h4,
+  .value h4,
+  .team-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+
+  .card p,
+  .value p,
+  .team-card p {
+    font-size: 0.8rem;
+  }
+
+  /* QUOTES */
+  blockquote {
+    padding-left: 10px;
+    font-size: 0.75rem;
+    margin: 12px 0;
+  }
+
+  blockquote span {
+    font-size: 0.7rem;
+    margin-top: 4px;
+  }
+
   /* CTA */
   .cta {
-    padding: 40px 0;
+    padding: 30px 0;
   }
 
   .cta h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
   }
 
   .cta p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 15px 0;
+    font-size: 0.75rem;
   }
 }

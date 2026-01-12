@@ -19,9 +19,17 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.8em;
       font-size: 1.5em;
       font-weight: 700;
       color: var(--color-white);
+    }
+
+    .logo img {
+      height: 40px;
+      width: auto;
     }
 
     .logo .green-text {
@@ -192,11 +200,17 @@
       border-radius: 8px;
       text-align: center;
       color: white;
-      font-size: 5em;
       min-height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .about-image img {
+      max-width: 100%;
+      height: auto;
+      max-height: 300px;
+      border-radius: 6px;
     }
 
     /* Contact section */
@@ -317,7 +331,10 @@
 <body>
   <!-- Header / Navigation -->
   <header>
-    <div class="logo">Green<span class="green-text">7</span></div>
+    <div class="logo">
+      <img src="Logo.png" alt="Green7 Logo">
+      <span>Green<span class="green-text">7</span></span>
+    </div>
     <nav>
       <a href="#features">Features</a>
       <a href="#about">About</a>
@@ -327,6 +344,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
+    <img src="mascot.png" alt="RoBin Mascot" style="max-width: 200px; height: auto; margin-bottom: 1.5em; border-radius: 8px;">
     <h1>RoBin</h1>
     <p class="tagline">The Innovative Talking Trash Bin</p>
     <p style="margin-bottom: 2em; font-weight: 300;">Revolutionizing waste management with AI-powered interactive technology</p>
@@ -385,7 +403,9 @@
         <p>RoBin is our flagship product—a talking trash bin that makes waste disposal fun and educational for everyone, from children learning about recycling to organizations striving for sustainability goals.</p>
         <button class="btn-primary">Explore Our Mission</button>
       </div>
-      <div class="about-image">🤖</div>
+      <div class="about-image">
+        <img src="productimage.jpeg" alt="RoBin Product">
+      </div>
     </div>
   </section>
 

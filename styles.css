@@ -64,7 +64,7 @@ nav a {
 }
 
 .logo-img {
-  height: 50px;
+  height: 65px;
   vertical-align: middle;
   margin-right: 10px;
 }
@@ -180,12 +180,26 @@ blockquote span {
   text-align: center;
 }
 
+.cta h3 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
 .cta a {
-  color: var(--green);
+  color: white;
+  text-decoration: underline;
 }
 
 .cta .btn-primary {
   margin-top: 20px;
+  color: var(--green);
+  text-decoration: none;
 }
 
 /* FOOTER */

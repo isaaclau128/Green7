@@ -1,0 +1,135 @@
+/* Import Open Sans from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+/* CSS Variables for theme colors */
+:root {
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-green: #2e7d32; /* primary accent green */
+  --color-green-light: #4caf50;
+  --color-green-dark: #1b5e20;
+
+  --text-primary: var(--color-black);
+  --text-secondary: #444444;
+  --background-main: var(--color-white);
+}
+
+/* Reset / Base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  background-color: var(--background-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-black);
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+p {
+  color: var(--text-secondary);
+  margin-bottom: 1em;
+}
+
+a {
+  color: var(--color-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-green-dark);
+}
+
+/* Buttons */
+button,
+.button {
+  font-family: inherit;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border: none;
+  padding: 0.6em 1.2em;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover,
+.button:hover {
+  background-color: var(--color-green-dark);
+}
+
+button:active,
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Accent utility classes */
+.text-green {
+  color: var(--color-green);
+}
+
+.text-black {
+  color: var(--color-black);
+}
+
+.bg-green {
+  background-color: var(--color-green);
+  color: var(--color-white);
+}
+
+.bg-black {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Cards / containers */
+.card {
+  background-color: var(--color-white);
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 1.2em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Forms */
+input,
+textarea,
+select {
+  font-family: inherit;
+  padding: 0.5em 0.6em;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-green);
+}
+
+/* Footer / header accents */
+header,
+footer {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 1em;
+}

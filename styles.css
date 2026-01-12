@@ -189,3 +189,234 @@ footer {
   color: var(--gray);
   font-size: 0.9rem;
 }
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  /* NAV */
+  .navbar {
+    position: sticky;
+  }
+
+  .nav-content {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 0;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 45px !important;
+  }
+
+  nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  nav a {
+    margin-left: 0;
+    margin-right: 8px;
+    font-size: 0.9rem;
+    padding: 6px 10px;
+  }
+
+  .btn-small {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-text {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 50px 0;
+  }
+
+  .section h3 {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  /* GRIDS */
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+
+  /* CARDS */
+  .card,
+  .value,
+  .team-card {
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .card h4,
+  .value h4,
+  .team-card h4 {
+    font-size: 1rem;
+  }
+
+  .card p,
+  .value p,
+  .team-card p {
+    font-size: 0.9rem;
+  }
+
+  /* QUOTES */
+  blockquote {
+    padding-left: 16px;
+    font-size: 0.9rem;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 50px 0;
+  }
+
+  .cta h3 {
+    font-size: 1.5rem;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 20px 0;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .nav-content {
+    padding: 10px 0;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo img {
+    height: 40px !important;
+  }
+
+  nav {
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  nav a {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+    margin-right: 6px;
+  }
+
+  .btn-small {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 40px 0;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-text {
+    font-size: 0.9rem;
+    margin: 15px 0;
+  }
+
+  .btn-primary {
+    padding: 9px 18px;
+    font-size: 0.9rem;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 40px 0;
+  }
+
+  .section h3 {
+    font-size: 1.3rem;
+  }
+
+  /* GRIDS */
+  .grid-3,
+  .grid-4 {
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  /* CARDS */
+  .card,
+  .value,
+  .team-card {
+    padding: 16px;
+  }
+
+  /* CTA */
+  .cta {
+    padding: 40px 0;
+  }
+
+  .cta h3 {
+    font-size: 1.3rem;
+  }
+
+  .cta p {
+    font-size: 0.9rem;
+  }
+}
